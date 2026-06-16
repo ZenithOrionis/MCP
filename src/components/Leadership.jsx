@@ -51,7 +51,11 @@ export default function Leadership() {
               whileTap={{ scale: 0.97 }}
             >
               <div className="leadership__avatar">
-                <span className="leadership__initial">{leader.initial}</span>
+                {leader.imgSrc ? (
+                  <img src={leader.imgSrc} alt={leader.name} className="leadership__photo" />
+                ) : (
+                  <span className="leadership__initial">{leader.initial}</span>
+                )}
               </div>
               <h3 className="leadership__name">{leader.name}</h3>
               <p className="leadership__role">{leader.role}</p>

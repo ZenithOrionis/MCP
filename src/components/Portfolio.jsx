@@ -27,7 +27,11 @@ function PortfolioCard({ item, index }) {
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => setIsHovered(!isHovered)}
     >
-      <div className="portfolio__gradient" />
+      {item.imgSrc ? (
+        <img src={item.imgSrc} alt={item.title} className="portfolio__image" />
+      ) : (
+        <div className="portfolio__gradient" />
+      )}
 
       <motion.div
         className="portfolio__overlay"

@@ -166,14 +166,14 @@
     "title": "Printing Perfection",
     "subtitle": "\"Every Impression Tells a Story\"",
     "items": [
-      { "id": 1, "title": "Pharmaceutical Packaging", "category": "Packaging", "size": "tall" },
-      { "id": 2, "title": "Luxury Cosmetic Box", "category": "Packaging", "size": "medium" },
-      { "id": 3, "title": "Corporate Calendar 2025", "category": "Corporate", "size": "medium" },
-      { "id": 4, "title": "Coffee Table Art Book", "category": "Books", "size": "tall" },
-      { "id": 5, "title": "Product Catalog", "category": "Corporate", "size": "short" },
-      { "id": 6, "title": "Wine Label Collection", "category": "Specialty", "size": "medium" },
-      { "id": 7, "title": "Annual Report", "category": "Corporate", "size": "tall" },
-      { "id": 8, "title": "Promotional Brochure", "category": "Corporate", "size": "short" }
+      { "id": 1, "title": "Pharmaceutical Packaging", "category": "Packaging", "size": "tall", "imgSrc": "" },
+      { "id": 2, "title": "Luxury Cosmetic Box", "category": "Packaging", "size": "medium", "imgSrc": "" },
+      { "id": 3, "title": "Corporate Calendar 2025", "category": "Corporate", "size": "medium", "imgSrc": "" },
+      { "id": 4, "title": "Coffee Table Art Book", "category": "Books", "size": "tall", "imgSrc": "" },
+      { "id": 5, "title": "Product Catalog", "category": "Corporate", "size": "short", "imgSrc": "" },
+      { "id": 6, "title": "Wine Label Collection", "category": "Specialty", "size": "medium", "imgSrc": "" },
+      { "id": 7, "title": "Annual Report", "category": "Corporate", "size": "tall", "imgSrc": "" },
+      { "id": 8, "title": "Promotional Brochure", "category": "Corporate", "size": "short", "imgSrc": "" }
     ]
   },
   "processTimeline": {
@@ -216,13 +216,15 @@
         "initial": "A",
         "name": "Alman Madrid",
         "role": "CEO & General Manager",
-        "brief": "With over 30 years of printing industry expertise, Alman Madrid founded MCP with a vision to deliver world-class commercial printing to Philippine businesses."
+        "brief": "With over 30 years of printing industry expertise, Alman Madrid founded MCP with a vision to deliver world-class commercial printing to Philippine businesses.",
+        "imgSrc": ""
       },
       {
         "initial": "K",
         "name": "Kate Madrid",
         "role": "Operations Manager",
-        "brief": "Kate ensures every project flows seamlessly from order to delivery, maintaining the highest standards of quality and operational excellence."
+        "brief": "Kate ensures every project flows seamlessly from order to delivery, maintaining the highest standards of quality and operational excellence.",
+        "imgSrc": ""
       }
     ]
   },
@@ -231,13 +233,14 @@
     "title": "Our Network",
     "subtitle": "We partner with leading suppliers and brands to deliver uncompromising quality.",
     "logos": [
-      { "name": "Vibal Group", "imgSrc": "/MCP/logos/vibal.png" },
-      { "name": "Mundipharma", "imgSrc": "/MCP/logos/mundipharma.png" },
-      { "name": "Natrapharm", "imgSrc": "/MCP/logos/natrapharm.png" },
-      { "name": "Unilab", "imgSrc": "/MCP/logos/unilab.png" },
-      { "name": "Heidelberg", "imgSrc": "/MCP/logos/heidelberg.png" },
-      { "name": "Sappi", "imgSrc": "/MCP/logos/sappi.png" },
-      { "name": "Sun Chemical", "imgSrc": "/MCP/logos/sun-chemical.png" }
+      { "name": "San Miguel", "imgSrc": "/partners/san-miguel.png" },
+      { "name": "Dunkin'", "imgSrc": "/partners/dunkin.png" },
+      { "name": "Bench", "imgSrc": "/partners/bench.png" },
+      { "name": "Cargill", "imgSrc": "/partners/cargill.png" },
+      { "name": "Nestlé", "imgSrc": "/partners/nestle.png" },
+      { "name": "AstraZeneca", "imgSrc": "/partners/astrazeneca.png" },
+      { "name": "Globe", "imgSrc": "/partners/globe.png" },
+      { "name": "Universal Robina", "imgSrc": "/partners/urc.png" }
     ]
   },
   "contact": {

@@ -91,8 +91,24 @@
 .portfolio__gradient {
   position: absolute;
   inset: 0;
+  background: var(--portfolio-gradient);
+  opacity: 0.8;
+  transition: opacity var(--transition-normal);
+}
+
+.portfolio__image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+@media (hover: hover) {
+  .portfolio__card:hover .portfolio__image {
+    transform: scale(1.05);
+  }
 }
 
 /* Unique gradient for each card — botanical palette */
