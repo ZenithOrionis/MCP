@@ -62,6 +62,7 @@ export default function Leadership() {
               key={leader.name}
               className="leadership__card"
               variants={cardVariants}
+              whileTap={{ scale: 0.97 }}
             >
               <div className="leadership__avatar">
                 <span className="leadership__initial">{leader.initial}</span>

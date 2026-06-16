@@ -16,8 +16,8 @@
   width: 300%;
   height: 300%;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(137, 215, 183, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(137, 215, 183, 0.025) 1px, transparent 1px);
   background-size: 50px 50px;
   transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
   animation: gridMove 20s linear infinite;
@@ -40,8 +40,8 @@
 .orb-1 {
   width: 45vw;
   height: 45vw;
-  background: var(--accent-blue);
-  opacity: 0.15;
+  background: var(--accent-mint);
+  opacity: 0.08;
   top: -15%;
   left: -10%;
   animation-duration: 25s;
@@ -50,8 +50,8 @@
 .orb-2 {
   width: 40vw;
   height: 40vw;
-  background: var(--accent-purple);
-  opacity: 0.12;
+  background: var(--accent-sage);
+  opacity: 0.07;
   bottom: -15%;
   right: -5%;
   animation-duration: 28s;
@@ -61,8 +61,8 @@
 .orb-3 {
   width: 35vw;
   height: 35vw;
-  background: var(--accent-teal);
-  opacity: 0.1;
+  background: var(--accent-cream);
+  opacity: 0.05;
   top: 30%;
   left: 35%;
   animation-duration: 32s;

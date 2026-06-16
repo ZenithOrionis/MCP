@@ -66,6 +66,7 @@
   cursor: pointer;
   transition: color var(--transition-base);
   white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .products__filter-btn:hover {
@@ -94,7 +95,7 @@
 
 /* ---- Product Card ---- */
 .products__card {
-  padding: 2rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -113,26 +114,26 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent-blue);
-  background: var(--accent-blue-muted);
+  color: var(--accent-mint);
+  background: var(--accent-mint-muted);
   padding: 0.3rem 0.75rem;
   border-radius: 100px;
   line-height: 1;
 }
 
 .products__card-badge--books {
-  color: var(--accent-purple);
-  background: var(--accent-purple-muted);
+  color: var(--accent-sage);
+  background: var(--accent-sage-muted);
 }
 
 .products__card-badge--corporate {
-  color: var(--accent-teal);
-  background: var(--accent-teal-muted);
+  color: var(--accent-cream);
+  background: var(--accent-cream-muted);
 }
 
 .products__card-badge--specialty {
-  color: #ffb347;
-  background: rgba(255, 179, 71, 0.12);
+  color: #E8C07A;
+  background: rgba(232, 192, 122, 0.12);
 }
 
 .products__card-icon {
@@ -143,18 +144,18 @@
 
 .products__card:hover .products__card-icon {
   opacity: 0.8;
-  color: var(--text-secondary);
+  color: var(--accent-mint);
 }
 
 .products__card-title {
-  font-size: 1.2rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.3;
 }
 
 .products__card-description {
-  font-size: 0.92rem;
+  font-size: clamp(0.85rem, 1vw, 0.92rem);
   color: var(--text-muted);
   line-height: 1.65;
   margin: 0;

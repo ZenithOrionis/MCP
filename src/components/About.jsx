@@ -52,9 +52,9 @@ export default function About() {
     offset: ['start end', 'end start'],
   });
 
-  const bgR = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [10, 10, 10, 10]);
-  const bgG = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [10, 18, 31, 31]);
-  const bgB = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [15, 22, 46, 46]);
+  const bgR = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [26, 26, 31, 31]);
+  const bgG = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [49, 49, 61, 61]);
+  const bgB = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [44, 44, 54, 54]);
   const backgroundColor = useTransform(
     [bgR, bgG, bgB],
     ([r, g, b]) => `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`

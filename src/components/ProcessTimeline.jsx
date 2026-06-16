@@ -47,15 +47,15 @@ function TimelineNode({ step, index, scrollYProgress, totalSteps }) {
     scrollYProgress,
     [nodeThreshold, nodeActivation],
     [
-      'linear-gradient(135deg, rgba(0,212,255,0), rgba(180,74,255,0))',
-      'linear-gradient(135deg, rgba(0,212,255,0.2), rgba(180,74,255,0.15))',
+      'linear-gradient(135deg, rgba(137,215,183,0), rgba(66,132,117,0))',
+      'linear-gradient(135deg, rgba(137,215,183,0.2), rgba(66,132,117,0.15))',
     ]
   );
 
   const circleColor = useTransform(
     scrollYProgress,
     [nodeThreshold, nodeActivation],
-    ['#a0a8b8', '#ffffff']
+    ['#7a9e93', '#FFF4E1']
   );
 
   const isOdd = index % 2 === 0;

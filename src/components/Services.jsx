@@ -81,6 +81,7 @@ export default function Services() {
               key={service.number}
               className="glass-card services__card"
               variants={cardVariants}
+              whileTap={{ scale: 0.97 }}
             >
               <span className="services__card-number">{service.number}</span>
 

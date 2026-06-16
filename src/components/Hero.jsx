@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useRef, useCallback } from 'react';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import './Hero.css';
 
@@ -40,6 +41,28 @@ const fadeUpVariants = {
 };
 
 export default function Hero() {
+  const heroRef = useRef(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  
+  const springConfig = { stiffness: 100, damping: 30, mass: 0.5 };
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [6, -6]), springConfig);
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-6, 6]), springConfig);
+
+  const handlePointerMove = useCallback((e) => {
+    const rect = heroRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    mouseX.set(x);
+    mouseY.set(y);
+  }, [mouseX, mouseY]);
+
+  const handlePointerLeave = useCallback(() => {
+    mouseX.set(0);
+    mouseY.set(0);
+  }, [mouseX, mouseY]);
+
   const handleScrollClick = (e) => {
     e.preventDefault();
     const target = document.querySelector('#about');
@@ -52,6 +75,9 @@ export default function Hero() {
     <motion.section
       id="hero"
       className="hero"
+      ref={heroRef}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={handlePointerLeave}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
@@ -61,12 +87,17 @@ export default function Hero() {
       <div className="hero__particle hero__particle--2" aria-hidden="true" />
       <div className="hero__particle hero__particle--3" aria-hidden="true" />
 
-      {/* Morphing holographic sphere */}
+      {/* Morphing holographic sphere with tilt */}
       <motion.div
         className="hero__sphere-wrap"
         initial={{ opacity: 0, scale: 0.85 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+        style={{
+          rotateX,
+          rotateY,
+          perspective: 600,
+        }}
       >
         <div className="hero__sphere" aria-hidden="true" />
       </motion.div>
@@ -84,6 +115,7 @@ export default function Hero() {
               key={`${char}-${i}`}
               className="hero__letter"
               variants={letterVariants}
+              whileHover={{ scale: 1.15, color: '#89D7B7', transition: { duration: 0.2 } }}
             >
               {char === ' ' ? '\u00A0' : char}
             </motion.span>

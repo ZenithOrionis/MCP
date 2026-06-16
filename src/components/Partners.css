@@ -19,7 +19,7 @@
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent-blue);
+  color: var(--accent-mint);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@
   display: inline-block;
   width: 24px;
   height: 1px;
-  background: var(--accent-blue);
+  background: var(--accent-mint);
   opacity: 0.5;
 }
 
@@ -43,7 +43,7 @@
 
 .partners__subtitle {
   color: var(--text-secondary);
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
   line-height: 1.75;
   margin: 0;
 }
@@ -110,6 +110,7 @@
   align-items: center;
   gap: 1rem;
   min-width: 180px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) {
