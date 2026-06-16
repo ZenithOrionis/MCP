@@ -1,18 +1,10 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './About.css';
 
-const stats = [
-  { number: '30+', label: 'Years Experience' },
-  { number: '2018', label: 'Established' },
-  { number: '1000+', label: 'Projects Completed' },
-];
-
-const paragraphs = [
-  'Founded in 2018 in Cainta, Rizal, Madrid Commercial Press was born from a vision to elevate the standards of commercial printing in the Philippines.',
-  'Built on Mr. Madrid\u2019s three decades of industry mastery, we transform ideas from concept to tangible reality \u2014 one impression at a time.',
-];
+const { stats, paragraphs, label, title, missionQuote } = data.about;
 
 const containerVariants = {
   hidden: {},
@@ -69,14 +61,12 @@ export default function About() {
     >
       <div className="container">
         <ScrollReveal>
-          <span className="section-label">OUR STORY</span>
+          <span className="section-label">{label}</span>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="section-title">
-            Established on Craft,
-            <br />
-            Built on Experience
+          <h2 className="section-title" style={{ whiteSpace: 'pre-line' }}>
+            {title}
           </h2>
         </ScrollReveal>
 
@@ -97,7 +87,7 @@ export default function About() {
             <motion.div className="divider" variants={lineVariants} />
 
             <motion.p className="about__mission" variants={lineVariants}>
-              &ldquo;Print the Success of our clients.&rdquo;
+              {missionQuote}
             </motion.p>
           </motion.div>
 

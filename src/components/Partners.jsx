@@ -1,5 +1,8 @@
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './Partners.css';
+
+const { label, title, subtitle } = data.partners;
 
 import sanMiguelLogo from '../assets/partners/san-miguel.png';
 import dunkinLogo from '../assets/partners/dunkin.png';
@@ -48,10 +51,9 @@ export default function Partners() {
       <div className="container">
         <ScrollReveal>
           <div className="partners__header">
-            <span className="partners__label">Trusted By</span>
-            <h2 className="partners__title section-title">Our Partners</h2>
-            <p className="partners__subtitle">Building Success Together</p>
-            <p className="partners__subtitle">Through Trust and Collaboration</p>
+            <span className="partners__label">{label}</span>
+            <h2 className="partners__title section-title">{title}</h2>
+            <p className="partners__subtitle">{subtitle}</p>
           </div>
         </ScrollReveal>
       </div>

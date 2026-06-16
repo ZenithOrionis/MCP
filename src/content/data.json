@@ -1,0 +1,259 @@
+{
+  "hero": {
+    "title": "OFFSET PRINTING",
+    "subtitle": "Madrid Commercial Press",
+    "ctaText": "Discover Our Craft"
+  },
+  "about": {
+    "label": "OUR STORY",
+    "title": "Established on Craft,\nBuilt on Experience",
+    "paragraphs": [
+      "Founded in 2018 in Cainta, Rizal, Madrid Commercial Press was born from a vision to elevate the standards of commercial printing in the Philippines.",
+      "Built on Mr. Madrid's three decades of industry mastery, we transform ideas from concept to tangible reality — one impression at a time."
+    ],
+    "missionQuote": "\"Print the Success of our clients.\"",
+    "stats": [
+      { "number": "30+", "label": "Years Experience" },
+      { "number": "2018", "label": "Established" },
+      { "number": "1000+", "label": "Projects Completed" }
+    ]
+  },
+  "services": {
+    "label": "WHAT WE DO",
+    "title": "End-to-End Print Mastery",
+    "items": [
+      {
+        "number": "01",
+        "title": "Pre-Press",
+        "icon": "Palette",
+        "features": [
+          "Artwork & Design Creation",
+          "Mock-up Development",
+          "Computer To Plate (CTP) Technology"
+        ]
+      },
+      {
+        "number": "02",
+        "title": "Press",
+        "icon": "Printer",
+        "features": [
+          "Advanced Offset Printing Technology",
+          "CMYK & Pantone Color Systems",
+          "Custom In-House Color Mixing"
+        ]
+      },
+      {
+        "number": "03",
+        "title": "Post-Press",
+        "icon": "Layers",
+        "features": [
+          "UV Coating & Spot UV",
+          "3D Lamination",
+          "Die-Cut & Foil Stamping",
+          "Perfect & Saddle-Stitch Binding"
+        ]
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "label": "THE MCP ADVANTAGE",
+    "title": "What Sets Us Apart",
+    "items": [
+      {
+        "icon": "Zap",
+        "title": "Rapid Turnaround",
+        "description": "Streamlined processes ensuring your deadlines are met without compromising quality."
+      },
+      {
+        "icon": "Award",
+        "title": "Uncompromising Quality",
+        "description": "Rigorous multi-stage quality control checks from pre-press to final delivery."
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Technical Expertise",
+        "description": "Decades of combined experience navigating complex printing challenges and materials."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Absolute Reliability",
+        "description": "A proven track record of consistency for multinational brands and local enterprises."
+      }
+    ]
+  },
+  "products": {
+    "label": "OUR PRODUCTS",
+    "title": "The Masterpieces We Create",
+    "subtitle": "From concept to creation, we bring your vision to life across every format.",
+    "categories": ["All", "Packaging", "Books", "Corporate", "Specialty"],
+    "items": [
+      {
+        "id": "pkg-1",
+        "name": "Product Packaging",
+        "description": "Custom boxes and containers designed to protect and showcase your products.",
+        "category": "Packaging"
+      },
+      {
+        "id": "pkg-2",
+        "name": "Sleeves & Wrappers",
+        "description": "Precision-printed sleeves and wrappers for pharmaceutical and consumer goods.",
+        "category": "Packaging"
+      },
+      {
+        "id": "pkg-3",
+        "name": "Corrugated Boxes",
+        "description": "Durable packaging solutions for shipping and retail display.",
+        "category": "Packaging"
+      },
+      {
+        "id": "bk-1",
+        "name": "Hardcover Books",
+        "description": "Premium hardbound publications with archival-quality printing.",
+        "category": "Books"
+      },
+      {
+        "id": "bk-2",
+        "name": "Softcover & Paperbacks",
+        "description": "Cost-effective softcover printing for novels, manuals, and guides.",
+        "category": "Books"
+      },
+      {
+        "id": "bk-3",
+        "name": "Journals & Notebooks",
+        "description": "Custom journals with specialty covers and lay-flat binding.",
+        "category": "Books"
+      },
+      {
+        "id": "corp-1",
+        "name": "Brochures & Flyers",
+        "description": "High-impact marketing collateral with vivid color reproduction.",
+        "category": "Corporate"
+      },
+      {
+        "id": "corp-2",
+        "name": "Business Cards",
+        "description": "Premium cards with options for embossing, foil, and specialty finishes.",
+        "category": "Corporate"
+      },
+      {
+        "id": "corp-3",
+        "name": "Catalogs & Magazines",
+        "description": "Multi-page publications with perfect binding and saddle-stitch options.",
+        "category": "Corporate"
+      },
+      {
+        "id": "spec-1",
+        "name": "Foil Stamping",
+        "description": "Metallic and holographic foil applications for luxury finishing.",
+        "category": "Specialty"
+      },
+      {
+        "id": "spec-2",
+        "name": "Embossing & Debossing",
+        "description": "Tactile raised or recessed designs that add dimension to print.",
+        "category": "Specialty"
+      },
+      {
+        "id": "spec-3",
+        "name": "3D Lamination",
+        "description": "Eye-catching lenticular and textured lamination effects.",
+        "category": "Specialty"
+      }
+    ]
+  },
+  "portfolio": {
+    "label": "SAMPLE PRINTS",
+    "title": "Printing Perfection",
+    "subtitle": "\"Every Impression Tells a Story\"",
+    "items": [
+      { "id": 1, "title": "Pharmaceutical Packaging", "category": "Packaging", "size": "tall" },
+      { "id": 2, "title": "Luxury Cosmetic Box", "category": "Packaging", "size": "medium" },
+      { "id": 3, "title": "Corporate Calendar 2025", "category": "Corporate", "size": "medium" },
+      { "id": 4, "title": "Coffee Table Art Book", "category": "Books", "size": "tall" },
+      { "id": 5, "title": "Product Catalog", "category": "Corporate", "size": "short" },
+      { "id": 6, "title": "Wine Label Collection", "category": "Specialty", "size": "medium" },
+      { "id": 7, "title": "Annual Report", "category": "Corporate", "size": "tall" },
+      { "id": 8, "title": "Promotional Brochure", "category": "Corporate", "size": "short" }
+    ]
+  },
+  "processTimeline": {
+    "label": "OUR PROCESS",
+    "title": "Streamlined Execution",
+    "subtitle": "A transparent, milestone-driven approach to ensure quality from the first draft to the final delivery.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Consultation & Quotation",
+        "description": "We understand your project requirements, material preferences, and timelines to provide an accurate, competitive quote."
+      },
+      {
+        "number": "02",
+        "title": "Pre-Press & Proofing",
+        "description": "Our pre-press technicians prepare your artwork, perform color corrections, and provide digital or physical proofs for your approval."
+      },
+      {
+        "number": "03",
+        "title": "Production & Quality Check",
+        "description": "Your project hits the press. We conduct rigorous color matching and structural integrity checks during the entire run."
+      },
+      {
+        "number": "04",
+        "title": "Post-Press Finishing",
+        "description": "We apply the final touches — laminating, die-cutting, embossing, and binding — to elevate the printed piece."
+      },
+      {
+        "number": "05",
+        "title": "Delivery & Logistics",
+        "description": "Carefully packaged and quality-assured, the final products are delivered safely to your specified location."
+      }
+    ]
+  },
+  "leadership": {
+    "label": "Our Leaders",
+    "title": "The Visionaries Behind MCP",
+    "items": [
+      {
+        "initial": "A",
+        "name": "Alman Madrid",
+        "role": "CEO & General Manager",
+        "brief": "With over 30 years of printing industry expertise, Alman Madrid founded MCP with a vision to deliver world-class commercial printing to Philippine businesses."
+      },
+      {
+        "initial": "K",
+        "name": "Kate Madrid",
+        "role": "Operations Manager",
+        "brief": "Kate ensures every project flows seamlessly from order to delivery, maintaining the highest standards of quality and operational excellence."
+      }
+    ]
+  },
+  "partners": {
+    "label": "TRUSTED BY",
+    "title": "Our Network",
+    "subtitle": "We partner with leading suppliers and brands to deliver uncompromising quality.",
+    "logos": [
+      { "name": "Vibal Group", "imgSrc": "/MCP/logos/vibal.png" },
+      { "name": "Mundipharma", "imgSrc": "/MCP/logos/mundipharma.png" },
+      { "name": "Natrapharm", "imgSrc": "/MCP/logos/natrapharm.png" },
+      { "name": "Unilab", "imgSrc": "/MCP/logos/unilab.png" },
+      { "name": "Heidelberg", "imgSrc": "/MCP/logos/heidelberg.png" },
+      { "name": "Sappi", "imgSrc": "/MCP/logos/sappi.png" },
+      { "name": "Sun Chemical", "imgSrc": "/MCP/logos/sun-chemical.png" }
+    ]
+  },
+  "contact": {
+    "label": "REACH OUT",
+    "title": "Ready to Print Your Success?",
+    "subtitle": "Let's bring your next project to life.",
+    "buttonText": "Request a Quote",
+    "phone": "(02) 8942-1610",
+    "email": "madridcompress@gmail.com",
+    "address": "89 Rodriguez St. Felix Subd. Brgy. San Andres Cainta, Rizal, Philippines, 1900",
+    "form": {
+      "title": "Send us a message",
+      "buttonText": "Send Message",
+      "successMessage": "Message sent successfully!",
+      "errorMessage": "Failed to send message. Please try again or email us directly."
+    },
+    "footer": "© 2024 Madrid Commercial Press. All rights reserved."
+  }
+}

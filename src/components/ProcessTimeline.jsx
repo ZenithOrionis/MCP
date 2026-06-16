@@ -1,40 +1,10 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './ProcessTimeline.css';
 
-const steps = [
-  {
-    number: 1,
-    title: 'Quotation',
-    description:
-      'Share your project details and receive a transparent, competitive quote within 24 hours.',
-  },
-  {
-    number: 2,
-    title: 'Order Acquisition',
-    description:
-      'Confirm your order with our team and finalize all specifications and requirements.',
-  },
-  {
-    number: 3,
-    title: 'Project Initiation',
-    description:
-      'Our pre-press team begins artwork preparation, proofing, and plate generation.',
-  },
-  {
-    number: 4,
-    title: 'Approval of Project',
-    description:
-      'Review and approve final proofs before we proceed to the press floor.',
-  },
-  {
-    number: 5,
-    title: 'Production',
-    description:
-      'Your project comes to life on our advanced offset presses and post-press finishing lines.',
-  },
-];
+const { label, title, subtitle, items: steps } = data.processTimeline;
 
 function TimelineNode({ step, index, scrollYProgress, totalSteps }) {
   const nodeRef = useRef(null);
@@ -104,11 +74,9 @@ export default function ProcessTimeline() {
       <div className="container">
         <ScrollReveal>
           <div className="process__header">
-            <span className="section-label">GET STARTED</span>
-            <h2 className="section-title">Our Streamlined Process</h2>
-            <p className="process__subtitle">
-              From first contact to final delivery — a seamless journey.
-            </p>
+            <span className="section-label">{label}</span>
+            <h2 className="section-title">{title}</h2>
+            <p className="process__subtitle">{subtitle}</p>
           </div>
         </ScrollReveal>
 

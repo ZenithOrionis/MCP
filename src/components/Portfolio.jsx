@@ -1,18 +1,10 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './Portfolio.css';
 
-const portfolioItems = [
-  { id: 1, title: 'Pharmaceutical Packaging', category: 'Packaging', size: 'tall' },
-  { id: 2, title: 'Luxury Cosmetic Box', category: 'Packaging', size: 'medium' },
-  { id: 3, title: 'Corporate Calendar 2025', category: 'Corporate', size: 'medium' },
-  { id: 4, title: 'Coffee Table Art Book', category: 'Books', size: 'tall' },
-  { id: 5, title: 'Product Catalog', category: 'Corporate', size: 'short' },
-  { id: 6, title: 'Wine Label Collection', category: 'Specialty', size: 'medium' },
-  { id: 7, title: 'Annual Report', category: 'Corporate', size: 'tall' },
-  { id: 8, title: 'Promotional Brochure', category: 'Corporate', size: 'short' },
-];
+const { label, title, subtitle, items: portfolioItems } = data.portfolio;
 
 function PortfolioCard({ item, index }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -56,9 +48,9 @@ export default function Portfolio() {
       <div className="container">
         <ScrollReveal>
           <div className="portfolio__header">
-            <p className="section-label">SAMPLE PRINTS</p>
-            <h2 className="section-title">Printing Perfection</h2>
-            <p className="portfolio__subtitle">"Every Impression Tells a Story"</p>
+            <p className="section-label">{label}</p>
+            <h2 className="section-title">{title}</h2>
+            <p className="portfolio__subtitle">{subtitle}</p>
           </div>
         </ScrollReveal>
 

@@ -2,41 +2,16 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Palette, Printer, Layers } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './Services.css';
 
-const services = [
-  {
-    number: '01',
-    title: 'Pre-Press',
-    Icon: Palette,
-    items: [
-      'Artwork & Design Creation',
-      'Mock-up Development',
-      'Computer To Plate (CTP) Technology',
-    ],
-  },
-  {
-    number: '02',
-    title: 'Press',
-    Icon: Printer,
-    items: [
-      'Advanced Offset Printing Technology',
-      'CMYK & Pantone Color Systems',
-      'Custom In-House Color Mixing',
-    ],
-  },
-  {
-    number: '03',
-    title: 'Post-Press',
-    Icon: Layers,
-    items: [
-      'UV Coating & Spot UV',
-      '3D Lamination',
-      'Die-Cut & Foil Stamping',
-      'Perfect & Saddle-Stitch Binding',
-    ],
-  },
-];
+const { label, title, items } = data.services;
+
+const IconMap = {
+  Palette,
+  Printer,
+  Layers,
+};
 
 const containerVariants = {
   hidden: {},
@@ -62,11 +37,11 @@ export default function Services() {
     <section id="services" className="services section">
       <div className="container">
         <ScrollReveal>
-          <span className="section-label">WHAT WE DO</span>
+          <span className="section-label">{label}</span>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <h2 className="section-title">End-to-End Print Mastery</h2>
+          <h2 className="section-title">{title}</h2>
         </ScrollReveal>
 
         <motion.div
@@ -76,31 +51,34 @@ export default function Services() {
           initial="hidden"
           animate={gridInView ? 'visible' : 'hidden'}
         >
-          {services.map((service) => (
-            <motion.div
-              key={service.number}
-              className="glass-card services__card"
-              variants={cardVariants}
-              whileTap={{ scale: 0.97 }}
-            >
-              <span className="services__card-number">{service.number}</span>
+          {items.map((service) => {
+            const Icon = IconMap[service.icon];
+            return (
+              <motion.div
+                key={service.number}
+                className="glass-card services__card"
+                variants={cardVariants}
+                whileTap={{ scale: 0.97 }}
+              >
+                <span className="services__card-number">{service.number}</span>
 
-              <div className="services__icon-wrap">
-                <service.Icon size={26} strokeWidth={1.5} />
-              </div>
+                <div className="services__icon-wrap">
+                  {Icon && <Icon size={26} strokeWidth={1.5} />}
+                </div>
 
-              <h3 className="services__card-title">{service.title}</h3>
+                <h3 className="services__card-title">{service.title}</h3>
 
-              <ul className="services__list">
-                {service.items.map((item, i) => (
-                  <li key={i} className="services__list-item">
-                    <span className="services__dot" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+                <ul className="services__list">
+                  {service.features.map((item, i) => (
+                    <li key={i} className="services__list-item">
+                      <span className="services__dot" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

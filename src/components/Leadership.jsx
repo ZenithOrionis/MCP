@@ -1,24 +1,10 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './Leadership.css';
 
-const leaders = [
-  {
-    initial: 'A',
-    name: 'Alman Madrid',
-    role: 'CEO & General Manager',
-    brief:
-      'With over 30 years of printing industry expertise, Alman Madrid founded MCP with a vision to deliver world-class commercial printing to Philippine businesses.',
-  },
-  {
-    initial: 'K',
-    name: 'Kate Madrid',
-    role: 'Operations Manager',
-    brief:
-      'Kate ensures every project flows seamlessly from order to delivery, maintaining the highest standards of quality and operational excellence.',
-  },
-];
+const { label, title, items: leaders } = data.leadership;
 
 const containerVariants = {
   hidden: {},
@@ -45,8 +31,8 @@ export default function Leadership() {
       <div className="container">
         <ScrollReveal>
           <div className="leadership__header">
-            <span className="section-label">Our Leaders</span>
-            <h2 className="section-title">The Visionaries Behind MCP</h2>
+            <span className="section-label">{label}</span>
+            <h2 className="section-title">{title}</h2>
           </div>
         </ScrollReveal>
 

@@ -1,9 +1,10 @@
 import { useRef, useCallback } from 'react';
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import data from '../content/data.json';
 import './Hero.css';
 
-const TITLE_TEXT = 'OFFSET PRINTING';
+const TITLE_TEXT = data.hero.title;
 
 const containerVariants = {
   hidden: {},
@@ -129,7 +130,7 @@ export default function Hero() {
           animate="visible"
           custom={1.4}
         >
-          Madrid Commercial Press
+          {data.hero.subtitle}
         </motion.p>
       </div>
 
@@ -143,7 +144,7 @@ export default function Hero() {
         animate="visible"
         custom={1.8}
       >
-        <span className="hero__scroll-text">Discover Our Craft</span>
+        <span className="hero__scroll-text">{data.hero.ctaText}</span>
         <ChevronDown size={20} className="hero__scroll-icon" />
       </motion.a>
     </motion.section>

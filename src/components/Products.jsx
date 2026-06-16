@@ -2,9 +2,10 @@ import { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Package, BookOpen, Briefcase, Sparkles } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './Products.css';
 
-const categories = ['All', 'Packaging', 'Books', 'Corporate', 'Specialty'];
+const { label, title, subtitle, categories, items: products } = data.products;
 
 const categoryIcons = {
   Packaging: Package,
@@ -12,81 +13,6 @@ const categoryIcons = {
   Corporate: Briefcase,
   Specialty: Sparkles,
 };
-
-const products = [
-  {
-    id: 'pkg-1',
-    name: 'Product Packaging',
-    description: 'Custom boxes and containers designed to protect and showcase your products.',
-    category: 'Packaging',
-  },
-  {
-    id: 'pkg-2',
-    name: 'Sleeves & Wrappers',
-    description: 'Precision-printed sleeves and wrappers for pharmaceutical and consumer goods.',
-    category: 'Packaging',
-  },
-  {
-    id: 'pkg-3',
-    name: 'Corrugated Boxes',
-    description: 'Durable packaging solutions for shipping and retail display.',
-    category: 'Packaging',
-  },
-  {
-    id: 'bk-1',
-    name: 'Hardcover Books',
-    description: 'Premium hardbound publications with archival-quality printing.',
-    category: 'Books',
-  },
-  {
-    id: 'bk-2',
-    name: 'Softcover & Paperbacks',
-    description: 'Cost-effective softcover printing for novels, manuals, and guides.',
-    category: 'Books',
-  },
-  {
-    id: 'bk-3',
-    name: 'Journals & Notebooks',
-    description: 'Custom journals with specialty covers and lay-flat binding.',
-    category: 'Books',
-  },
-  {
-    id: 'corp-1',
-    name: 'Brochures & Flyers',
-    description: 'High-impact marketing collateral with vivid color reproduction.',
-    category: 'Corporate',
-  },
-  {
-    id: 'corp-2',
-    name: 'Business Cards',
-    description: 'Premium cards with options for embossing, foil, and specialty finishes.',
-    category: 'Corporate',
-  },
-  {
-    id: 'corp-3',
-    name: 'Catalogs & Magazines',
-    description: 'Multi-page publications with perfect binding and saddle-stitch options.',
-    category: 'Corporate',
-  },
-  {
-    id: 'spec-1',
-    name: 'Foil Stamping',
-    description: 'Metallic and holographic foil applications for luxury finishing.',
-    category: 'Specialty',
-  },
-  {
-    id: 'spec-2',
-    name: 'Embossing & Debossing',
-    description: 'Tactile raised or recessed designs that add dimension to print.',
-    category: 'Specialty',
-  },
-  {
-    id: 'spec-3',
-    name: '3D Lamination',
-    description: 'Eye-catching lenticular and textured lamination effects.',
-    category: 'Specialty',
-  },
-];
 
 const badgeClass = (category) => {
   const map = {
@@ -124,11 +50,9 @@ export default function Products() {
       <div className="container">
         <ScrollReveal>
           <div className="products__header">
-            <p className="section-label">OUR PRODUCTS</p>
-            <h2 className="section-title">The Masterpieces We Create</h2>
-            <p className="section-subtitle">
-              From concept to creation, we bring your vision to life across every format.
-            </p>
+            <p className="section-label">{label}</p>
+            <h2 className="section-title">{title}</h2>
+            <p className="section-subtitle">{subtitle}</p>
           </div>
         </ScrollReveal>
 

@@ -2,30 +2,26 @@ import { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
+import data from '../content/data.json';
 import './Contact.css';
+
+const { label, title, subtitle, buttonText, phone, email, address, form, footer } = data.contact;
 
 const contactItems = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '(02) 8942-1610',
+    value: phone,
   },
   {
     icon: Mail,
     label: 'Email',
-    value: 'madridcompress@gmail.com',
+    value: email,
   },
   {
     icon: MapPin,
     label: 'Office',
-    value:
-      '89 Rodriguez St. Felix Subd. Brgy. San Andres Cainta, Rizal, Philippines, 1900',
-  },
-  {
-    icon: MapPin,
-    label: 'Plant',
-    value:
-      '11 Lily St. Midtown Village, Brgy. San Andres, Cainta, Rizal, Philippines, 1900',
+    value: address,
   },
 ];
 
@@ -94,14 +90,14 @@ export default function Contact() {
         <ScrollReveal>
           <div className="contact__cta">
             <h2 className="contact__heading section-title">
-              Ready to Print Your Success?
+              {title}
             </h2>
             <p className="contact__subtitle">
-              Let&rsquo;s bring your next project to life.
+              {subtitle}
             </p>
             <div className="contact__cta-btn">
               <button className="btn-primary">
-                Request a Quote
+                {buttonText}
                 <ArrowRight />
               </button>
             </div>
@@ -138,7 +134,7 @@ export default function Contact() {
 
           <ScrollReveal delay={0.3}>
             <form className="contact__form" onSubmit={handleSubmit}>
-              <h3 className="contact__form-title">Send us a message</h3>
+              <h3 className="contact__form-title">{form.title}</h3>
               
               <div className="contact__form-group">
                 <label htmlFor="name" className="contact__form-label">Name</label>
@@ -188,12 +184,12 @@ export default function Contact() {
                 className="btn-primary contact__submit-btn"
                 disabled={status === 'submitting' || status === 'success'}
               >
-                {status === 'submitting' ? 'Sending...' : status === 'success' ? 'Message Sent' : 'Send Message'}
+                {status === 'submitting' ? 'Sending...' : status === 'success' ? form.successMessage : form.buttonText}
                 {status === 'success' ? <CheckCircle /> : status === 'error' ? <AlertCircle /> : <Send />}
               </button>
               
               {status === 'error' && (
-                <p className="contact__form-error">Something went wrong. Please try again.</p>
+                <p className="contact__form-error">{form.errorMessage}</p>
               )}
             </form>
           </ScrollReveal>
@@ -201,7 +197,7 @@ export default function Contact() {
 
         <footer className="contact__footer">
           <span className="contact__footer-text">
-            &copy; 2025 Madrid Commercial Press. All rights reserved.
+            {footer}
           </span>
           <span className="contact__footer-text">Crafted with precision.</span>
         </footer>
