@@ -1,0 +1,123 @@
+/* ================================================
+   Services — End-to-End Print Mastery
+   ================================================ */
+
+.services {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+/* ---- 3-column grid ---- */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2vw, 1.75rem);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ---- Card ---- */
+.services__card {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+
+.services__card:hover {
+  border-color: rgba(0, 212, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Card number — top-right corner */
+.services__card-number {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  opacity: 0.07;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ---- Icon wrapper ---- */
+.services__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 255, 0.1) 0%,
+    rgba(180, 74, 255, 0.08) 100%
+  );
+  color: var(--accent-blue);
+  flex-shrink: 0;
+  transition: background var(--transition-base);
+}
+
+.services__card:hover .services__icon-wrap {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 255, 0.15) 0%,
+    rgba(180, 74, 255, 0.12) 100%
+  );
+}
+
+/* ---- Title ---- */
+.services__card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+/* ---- List ---- */
+.services__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0.25rem;
+}
+
+.services__list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.services__dot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  opacity: 0.5;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services__card {
+    padding: 1.75rem;
+  }
+}

@@ -1,0 +1,143 @@
+/* ================================================
+   WhyChooseUs — "What Sets Us Apart"
+   ================================================ */
+
+.why-us {
+  padding: var(--section-padding) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle ambient background shape */
+.why-us__bg-glow {
+  position: absolute;
+  top: 20%;
+  right: -15%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.03) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.why-us__header {
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.why-us__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Stagger: odd items get top offset on desktop */
+.why-us__item:nth-child(even) {
+  margin-top: 3rem;
+}
+
+/* ---- Pillar Item ---- */
+.why-us__item {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  border-left: 2px solid transparent;
+  border-image: linear-gradient(
+    180deg,
+    var(--accent-blue),
+    var(--accent-purple)
+  ) 1;
+  border-radius: 0;
+  background: transparent;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.why-us__item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ---- Icon Container ---- */
+.why-us__icon-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 212, 255, 0.06);
+  transition: background var(--transition-base);
+}
+
+.why-us__item:hover .why-us__icon-wrapper {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.why-us__icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-blue);
+  stroke-width: 1.75;
+  transition: color var(--transition-base);
+}
+
+.why-us__item:hover .why-us__icon-wrapper svg {
+  color: var(--accent-teal);
+}
+
+/* ---- Text Content ---- */
+.why-us__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.why-us__item-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.why-us__item-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(0.875rem, 1vw, 0.95rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 42ch;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .why-us__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .why-us__item:nth-child(even) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-us__item {
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+  }
+
+  .why-us__icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+  .why-us__icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+}

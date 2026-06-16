@@ -1,0 +1,22 @@
+/* ================================================
+   App Layout & Composition Styles
+   ================================================ */
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth scroll behavior for the whole page */
+.app-content {
+  position: relative;
+}
+
+/* Skip vite default styles */
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}

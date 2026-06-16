@@ -1,0 +1,188 @@
+/* ================================================
+   About — Our Story & Vision
+   ================================================ */
+
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- Two-column grid ---- */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* ---- Left: Text column ---- */
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__paragraph {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  max-width: 52ch;
+}
+
+.about__mission {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 1.4vw, 1.35rem);
+  color: var(--text-primary);
+  line-height: 1.6;
+  max-width: 40ch;
+  opacity: 0.85;
+}
+
+/* ---- Right: Visual column ---- */
+.about__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 320px;
+}
+
+.about__quote-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__quote-shape {
+  width: clamp(180px, 20vw, 260px);
+  height: clamp(180px, 20vw, 260px);
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 212, 255, 0.08) 0%,
+    rgba(180, 74, 255, 0.06) 40%,
+    rgba(0, 255, 200, 0.05) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: morph 18s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.about__quote-mark {
+  font-family: var(--font-serif);
+  font-size: clamp(6rem, 10vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  background: var(--gradient-ink-subtle);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  user-select: none;
+  transform: translateY(-8px);
+}
+
+.about__quote-glow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.06) 0%,
+    rgba(180, 74, 255, 0.03) 40%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  z-index: 0;
+  animation: pulse-soft 6s ease-in-out infinite;
+}
+
+/* ---- Stats row ---- */
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--glass-border);
+}
+
+.about__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+}
+
+.about__stat-number {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.about__stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about__visual {
+    min-height: 220px;
+    order: -1;
+  }
+
+  .about__quote-shape {
+    width: 160px;
+    height: 160px;
+  }
+
+  .about__paragraph {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__stats {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .about__stat {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .about__stat:last-child {
+    border-bottom: none;
+  }
+
+  .about__visual {
+    min-height: 180px;
+  }
+
+  .about__quote-shape {
+    width: 140px;
+    height: 140px;
+  }
+}
